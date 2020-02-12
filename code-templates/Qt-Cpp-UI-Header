@@ -1,0 +1,25 @@
+#parse("C File Header.h")
+#[[#ifndef]]# ${PROJECT_NAME.toUpperCase()}_${NAME.toUpperCase()}_H
+#[[#define]]# ${PROJECT_NAME.toUpperCase()}_${NAME.toUpperCase()}_H
+
+#[[#include]]# <QtWidgets>
+
+namespace Ui
+{
+    class ${NAME};
+}
+
+class ${NAME}: public QWidget
+{
+    Q_OBJECT
+    
+public:
+    explicit ${NAME}(QWidget *parent=0);
+    virtual ~${NAME}();
+    
+private:
+    Ui::$NAME *ui;    
+    
+};
+
+#[[#endif]]# //${PROJECT_NAME.toUpperCase()}_${NAME.toUpperCase()}_H
